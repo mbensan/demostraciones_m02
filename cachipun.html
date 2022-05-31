@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cachipun</title>
+</head>
+<body>
+  <h2>Jugar cachipun (piedra-papel-tijera)</h2>
+  <script>
+    const jugador = prompt('Ingrese qué desea jugar\n 1: Piedra\n 2: Papel\n 3: Tijeras')
+    // generamos un numero al azar entre [0, 3[
+    const azar = Math.random() * 3
+    // vemos que jugada le tocó al computador
+    let computador;
+    if (azar < 1) {
+      computador = '1'
+    }
+    else if (azar < 2) {
+      computador = '2'
+    }
+    else {
+      computador = '3'
+    }
+
+    
+    if (jugador == '1') {
+      // si jugador elije piedra
+      if (computador == '1') {
+        console.log('Ambos empatan con Piedra')
+      }
+      else if (computador == '2') {
+        console.log('Computador le gana con Papel a su Piedra')
+      }
+      else {
+        console.log('Usted gana con Piedra a la Tijera')
+      }
+      // terminamos el IF de la piedra
+    } 
+    else if (jugador == '2') {
+      // si jugador elije papel
+      if (computador == '1') {
+        console.log('Usted gana con Papel a la Piedra')
+      }
+      else if (computador == '2') {
+        console.log('Empate con ambis elijendo papel')
+      }
+      else {
+        console.log('El computador gana con tijeras a su papel')
+      }
+    }
+    else {
+      // el jugador elije tijeras
+      if (computador == '1') {
+        console.log('Usted pierde con tijeras contra Piedra')
+      }
+      else if (computador == '2') {
+        console.log('Usted gana con tjeras a su papel')
+      }
+      else {
+        console.log('Empate con ambos elijendo tijeras')
+      }
+    }
+
+
+
+  </script>
+</body>
+</html>

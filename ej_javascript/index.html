@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <nav id="navegacion" class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">PagoFazil</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Servicios</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="escriba aquí" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="row">
+        <div class="col-lg-3 col-md-4 col-12 bg-primary">
+          <form class="p-4">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">jamás compartiremos esta información con nadie.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Permanecer conectados</label>
+            </div>
+            <button type="submit" class="btn btn-success">Enviar</button>
+          </form>
+        </div>
+        <div class="col-lg-7 col-md-8 col-12 bg-success">
+          <h1>Fotos de perritos</h1>
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4">
+              <img class="d-block w-100" src="https://s1.eestatic.com/2022/04/05/actualidad/662693884_223269248_1024x576.jpg" alt="">
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <img class="d-block w-100" src="https://s1.eestatic.com/2022/04/05/actualidad/662693884_223269248_1024x576.jpg" alt="">
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <img class="d-block w-100" src="https://s1.eestatic.com/2022/04/05/actualidad/662693884_223269248_1024x576.jpg" alt="">
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <img class="d-block w-100" src="https://s1.eestatic.com/2022/04/05/actualidad/662693884_223269248_1024x576.jpg" alt="">
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <img class="d-block w-100" src="https://s1.eestatic.com/2022/04/05/actualidad/662693884_223269248_1024x576.jpg" alt="">
+            </div>
+            <div class="col-12 col-md-6 col-lg-4">
+              <img class="d-block w-100" src="https://s1.eestatic.com/2022/04/05/actualidad/662693884_223269248_1024x576.jpg" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-2 d-lg-block d-none bg-warning">
+          Publicidad
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="mi_script.js"></script>
+  </body>
+</html>

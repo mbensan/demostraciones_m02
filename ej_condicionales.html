@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COndicionales</title>
+</head>
+<body>
+  <h1>Hola Curso</h1>
+  <script>
+    let edad = prompt('Indique su edad')
+    edad = parseInt(edad)
+
+    if (edad < 18) {
+
+      console.log('Usted NO puede entrar a clubes')
+    }
+    else if (edad < 21) {
+
+      console.log('Usted puede entrar, pero no comprar alcohol')
+
+    }
+    else {
+      console.log('Usted puede entrar a clubes')
+    }
+
+    // programa que ayuda a manejo responsable
+    let tragos = prompt('Ingrese cuántos tragos tomó hoy')
+    tragos = parseInt(tragos)
+    /*
+    let puede_manejar;
+    if (tragos > 0) {
+      puede_manejar = false
+    } else {
+      puede_manejar = true
+    }
+    */
+
+    const precaucion = tragos > 0 ? 'Usted no debería manejar' : 'Buen viaje!'
+    alert(precaucion)
+
+  </script>
+</body>
+</html>
