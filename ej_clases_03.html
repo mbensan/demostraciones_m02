@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio Dia 3</title>
+</head>
+<body>
+  <h2>Ejercicio día 3 en clases</h2>
+  <script>
+    // PARTE 1
+    /*
+      0 minutos 0 segundos
+      0 minutos 1 segundo
+      0 minutos 2 segundos
+      ......
+      4 minutos 59 segundos
+      5 minutos 0 segundos
+    */
+    let minutero = 0
+    
+    while (minutero <= 5) {
+      let segundero = 0
+
+      while (segundero <= 59) {
+
+        let mensaje = '';
+        // parte de los minutos
+        if (minutero == 1) {
+          mensaje = '1 minuto ';
+        } else {
+          mensaje = minutero + ' minutos ';
+        }
+        // parte de los segundos
+        if (segundero == 1) {
+          mensaje = mensaje + '1 segundo'
+        } else {
+          mensaje = mensaje + segundero + ' segundos'
+        }
+
+        console.log(mensaje)
+        segundero++
+
+      }
+      minutero++
+    }
+
+
+  </script>
+</body>
+</html>

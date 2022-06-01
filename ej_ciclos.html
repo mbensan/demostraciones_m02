@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciclos</title>
+</head>
+<body>
+  <h1>Ejemplo de Ciclos</h1>
+  <script>
+    // 1. Imprimir múltiplos de 150 entre el 0 y el 10000
+
+    let i = 0  // este es el iterador
+    while (i <= 10000) {
+      console.log('Vamos en el: ' + i)
+      // i = i + 150
+      i += 150
+    }
+    
+    // 2. Imprimir los numeros entre 10030 y 10060 (incluyendo el 10060)
+    
+    let j = 10030
+    while (j <= 10060) {
+      console.log('Vamos en el: ' + j)
+      j++  // atajo de j = j + 1
+    }
+
+    // 3. Ejemplo de loop infinito
+    while (true) {
+      // 1. Preguntamos un número al usuario
+      let cantidad = prompt('Elija un número\n o 0 para salir')
+
+      // 2. En caso de ser 0, salimos del loop (while)
+      if (cantidad == '0') {
+        alert('Gracias por jugar\n Vuelva pronto')
+        break
+      }
+
+      // 3. Lo transformamos a número
+      cantidad = parseInt(cantidad)
+
+      // 4. La página siempre gana
+      alert('Yo gano con el ' + (cantidad + 1))
+    }
+  </script>
+</body>
+</html>
