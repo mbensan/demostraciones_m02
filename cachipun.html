@@ -9,14 +9,20 @@
 <body>
   <h2>Jugar cachipun (piedra-papel-tijera)</h2>
   <script>
-    const veces = parseInt(prompt('Ingresa la cantidad de veces que deseas jugar'));
+    //const veces = parseInt(prompt('Ingresa la cantidad de veces que deseas jugar'));
     let i = 1;
     let ptje_humano = 0;
     let ptje_computador = 0;
 
-    while (i <= veces) {
+    while (true) {
 
-      const jugador = prompt('Ingrese qué desea jugar\n 1: Piedra\n 2: Papel\n 3: Tijeras')
+      const jugador = prompt('Ingrese qué desea jugar\n 1: Piedra\n 2: Papel\n 3: Tijeras\n 0: Salir del Juego')
+
+      // verificar si debemos salir del juego
+      if (jugador == '0') {
+        break;
+      }
+
       // generamos un numero al azar entre [0, 3[
       const azar = Math.random() * 3
       // vemos que jugada le tocó al computador
@@ -59,7 +65,7 @@
           ptje_computador++;
         }
       }
-      else {
+      else if (jugador == '3') {
         // el jugador elije tijeras
         if (computador == '1') {
           alert('Usted pierde con tijeras contra Piedra')
@@ -72,6 +78,9 @@
         else {
           alert('Empate con ambos elijendo tijeras')
         }
+      }
+      else {
+        alert('Entrada no válida')
       }
     
       i++;

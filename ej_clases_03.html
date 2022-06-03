@@ -47,6 +47,30 @@
     }
 
 
+    // FIZZBUZZ
+    let i = 1;
+
+    while (i <= 100) {
+      // FIZZ si i es multiplo de 3
+      if ( (i % 3 == 0) && (i % 5 == 0) ) {
+        console.log('FIZZBUZZ')
+      }
+      // BUZZ si i es multiplo de 5
+      else if (i % 5 == 0) {
+        console.log('BUZZ')
+      }
+      // FIZZBUZZ si es mult. de 3 y 5
+      else if (i % 3 == 0) {
+        console.log('FIZZ')
+      }
+      // o si no, el mismisimo numero
+      else {
+        console.log(i)
+      }
+
+      i++;
+    }
+
   </script>
 </body>
 </html>
