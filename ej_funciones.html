@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funciones</title>
+</head>
+<body>
+  <h2>Ejemplo de Funciones</h2>
+  <script>
+    function suma_10 (num) {
+      const suma = num + 10;
+      return suma; 
+    }
+
+    function promedio (nota1, nota2, nota3) {
+      // primero sumamos las 3 notas
+      const suma = nota1 + nota2 + nota3;
+      // dividimos la suma por 3
+      const prom = suma / 3;
+      // retornamos el valor final
+      return prom;
+
+      // después del "return", no se ejecuta nada más
+      const cuad = prom ** (1/2);
+      let texto = '<h2 class="title">' + 2.4 + '</h2>';
+      console.log(texto);
+    }
+
+    function saludar (nombre1, nombre2) {
+      return nombre1 + ' saludó eufóricamente a ' + nombre2;
+      return nombre1 + ' saludó tristemente a ' + nombre2;
+      return nombre1 + ' saludó enojadamente a ' + nombre2;
+    }
+    saludar('Axel', 'Mauro')
+
+    function circulo (radio) {
+      console.log('Si el radio es ' + radio + ', el perímetro será ' + (2 * Math.PI * radio) + ' y el área será ' + (Math.PI * radio * radio));
+    }
+    circulo(3);
+    circulo(7);
+    circulo(9);
+
+    function contar_a_n(salto, final) {
+      // hacemos algo
+    }
+
+    contar_a_n(4, 9)
+    1, 5, 9
+    // acá recién puedo utilizar mis funciones
+  </script>
+</body>
+</html>
