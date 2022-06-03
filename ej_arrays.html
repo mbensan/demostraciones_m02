@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arreglos</title>
+</head>
+<body>
+  <h2>Ejemplo de Arrays</h2>
+  <script>
+    function ciclo_while() {
+      // iterar por todos los múltiplos de 5 desde 100 hasta 300
+      let i = 100;  // 1. Variable que itera, y marcar el punto de partida
+  
+      while (i <= 300) { // 2. Condición para seguir entrando al while (techo)
+        console.log(i);  // Hago algo cada multiplo de 5
+        i = i + 5;  // 3. Incremento (me acerco al techo)
+      }
+    }
+
+    function ciclo_for () {
+
+      for (let i = 100; i <= 300; i += 5) {
+        console.log(i);
+      }
+
+    }
+
+    function fizzbuzz (inicio, termino) {
+
+      for (let i = inicio; i <= termino; i++) {
+        if (i%3 == 0 && i%5 == 0) {
+          console.log('FIZZBUZZ')
+        }
+        else if (i%5 == 0) {
+          console.log('FIZZ')
+        }
+        else if (i%3 == 0) {
+          console.log('BUZZ')
+        }
+        else {
+          console.log(i)
+        }
+      }
+    }
+
+    
+    function saludar (lista) {
+      // Debemos recorrer esta lista
+      /* 1 Forma, con un While 
+      let i = 0;
+      while ( i < lista.length ) {
+        const nombre = lista[i];
+        console.log('Hola ' + nombre);
+
+        i++;
+      }
+      */
+      for (let i=0; i < lista.length; i++) {
+        const nombre = lista[i];
+        console.log('Hola ' + nombre);
+      }
+    }
+
+    function saludarForEach(lista) {
+      lista.forEach( function (item) {
+        console.log('Hola ' + item)
+      } )
+    }
+    
+  </script>
+</body>
+</html>
