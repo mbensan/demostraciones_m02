@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios Extra JS</title>
+</head>
+<body>
+  <h2>Resolucion Ejercicios Fundamentos Básicos y Fundamentos Intermedios</h2>
+  <script>
+    // Fundamentos Básicos
+    // Pregunta 1
+    function del_1_al_255 () {
+      const ret = [];
+
+      for (let i=1; i <= 255; i++) {
+        ret.push(i)
+      }
+
+      return ret;
+    }
+
+    // Pregunta 2
+    function suma_pares_1000 () {
+      let suma = 0;
+      for (let i=2; i <= 1000; i += 2) {
+        suma = suma + i;
+      }
+      
+      return suma;
+    }
+
+    // Pregunta 3
+    function suma_impares_5000 () {
+      let suma = 0;
+      for (let i=1; i <= 5000; i += 2) {
+        suma = suma + i;
+      }
+      
+      return suma;
+    }
+
+    // FUNDAMENTOS INTERMEDIOS
+    // Pregunta 2
+    function factorial (num) {
+      /*
+        1! = 1
+        4! == 4*3*2*1 == 4 * 3!
+        7! = 7*6*5*4*3*2*1 == 7*6! == 7*6*5!
+        107! = 107*106*105* ... *3*2*1 == 107*106!
+        M! == M * (M-1)!
+      */
+      if (num <= 1) {
+        return 1;
+      }
+
+      return num * factorial(num - 1);
+    }
+
+    // Pregunta 5
+    function n_ultimo (arr, indice) {
+      if (indice > arr.length - 1) {
+        return null;
+      }
+
+      return arr[arr.length - indice - 1]
+    }
+    n_ultimo(['hola', 'hello', 'hallo', 'vonjour', 'iorana', 'ciao'], 4)  
+    //    POS   0        1        2         3         4         5
+    /* 
+      1 -> pos 4 == pos largo - 1 - 1
+      2 -> pos 3 == pos largo - 2 - 1
+      4 -> pos 1 == pos largo - 4 - 1
+    */
+
+  const peliculas = [
+    {
+      titulo: 'Terminator 2',
+      rating: 5,
+      laHasVisto: true
+    },
+    {
+      titulo: 'El último cazador de brujar',
+      rating: 4,
+      laHasVisto: false
+    },
+    {
+      titulo: 'El Presidente',
+      rating: 3,
+      laHasVisto: false
+    }
+  ];
+  // Iterando con un for ... of
+  for (let pelicula of peliculas) {
+
+    if (pelicula.laHasVisto == true) {
+      console.log('Viste "' + pelicula.titulo + '" - ' + pelicula.rating + ' estrellas');
+    } else {
+      console.log('No Viste "' + pelicula.titulo + '" - ' + pelicula.rating + ' estrellas');
+    }
+
+  }
+  </script>
+</body>
+</html>

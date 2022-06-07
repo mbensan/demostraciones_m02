@@ -8,7 +8,7 @@
 </head>
 <body>
   <h2>Ejemplo de Arrays</h2>
-  <script>
+  <script lang="javascript">
     function ciclo_while() {
       // iterar por todos los múltiplos de 5 desde 100 hasta 300
       let i = 100;  // 1. Variable que itera, y marcar el punto de partida
@@ -68,6 +68,21 @@
         console.log('Hola ' + item)
       } )
     }
+
+    // encuentra el valor más grande de un array
+    function max (lista) {
+      // [6, 3, 67, 12, -5, 0]  mayor=67
+      let mayor = lista[0];
+
+      for (let i=1; i < lista.length; i++) {
+        if (lista[i] > mayor) {
+          mayor = lista[i];
+        }
+      }
+
+      return mayor;
+    }
+
     
   </script>
 </body>
