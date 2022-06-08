@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <h1>Ejemplos de Eventos en JS</h1>
+    <div class="row">
+      <div class="col-4">
+        <h3>Profesores de P5</h3>
+        <ul id="profesores" class="list-group">
+          <li class="list-group-item">Rodrigo</li>
+          <li class="list-group-item">Denis</li>
+          <li class="list-group-item">Matias</li>
+          <li class="list-group-item">Flor</li>
+        </ul>
+      </div>
+      <div class="col-4">
+        <div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password_id" onchange="mostrar_password()">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button class="btn btn-primary">Click Acá</button>
+        </div>
+      </div>
+      <div class="col-4">
+        <div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Ingresa tu nombre</label>
+            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp">
+            <div id="saludo" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  <script>
+    // Si queremos reaccionar al evento 'click', primero obtenemos el elemento
+    const btn = document.querySelector('.btn');
+
+    // después le añadimos un manejador (handler o callback)
+    btn.addEventListener('click', function (evento) {
+      console.log(evento);
+      alert('Aaauuuch!!')
+    } )
+
+    // otra forma de manejar eventos (usando los on-...)
+    const pass = document.querySelector('#password_id');
+
+    function mostrar_password () {
+      console.log(pass.value);
+    }
+
+    // acá vamos a ver como manejar eventos sobre varios objetos a la vez
+    const profes = document.querySelectorAll('#profesores li');
+    // primero definimos un manejador (handler)
+    function handlerProfes (ev) {
+      this.style['background-color'] = 'burlywood';
+      console.log(this)
+      console.log(ev)
+    }
+
+    // y después le asignamos el manejador a cada profe
+    // for (let i=0; i<profes.length; i++)
+    for (let profe of profes) {
+      profe.addEventListener('click', handlerProfes )
+    }
+
+    const nombre = document.querySelector('#nombre');
+    const saludo = document.querySelector('#saludo');
+
+    nombre.addEventListener('keyup', function (ev) {
+      console.log(ev)
+      if (ev.keyCode == 192) {
+        saludo.textContent = 'Por favor evite usar "eñes"';
+      } else if (ev.keyCode == 13) {  // si usuario ingresa Enter
+        // Capturo el texto del input
+        const texto_nombre = nombre.value;
+        // Genero el saludo correspondiente
+        saludo.textContent = 'Hola ' + texto_nombre + '. ¿Cómo estás?'
+      }
+    })
+
+
+
+  </script>
+</body>
+</html>
